@@ -1,0 +1,57 @@
+[debug] [2019-09-07T03:59:41.920Z] ----------------------------------------------------------------------
+[debug] [2019-09-07T03:59:41.925Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ACER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-09-07T03:59:41.925Z] CLI Version:   7.3.1
+[debug] [2019-09-07T03:59:41.925Z] Platform:      win32
+[debug] [2019-09-07T03:59:41.925Z] Node Version:  v10.16.2
+[debug] [2019-09-07T03:59:41.928Z] Time:          Sat Sep 07 2019 09:29:41 GMT+0530 (India Standard Time)
+[debug] [2019-09-07T03:59:41.928Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-07T03:59:41.945Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-07T03:59:41.946Z] > authorizing via signed-in user
+[debug] [2019-09-07T03:59:41.946Z] [iam] checking project socialape-3baae for permissions ["firebase.projects.get"]
+[debug] [2019-09-07T03:59:41.949Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/socialape-3baae:testIamPermissions  
+
+[debug] [2019-09-07T03:59:43.758Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-07T03:59:43.765Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/socialape-3baae  
+ 
+[debug] [2019-09-07T03:59:44.567Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'G:\react\social'...
+[info] 
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "G:\react\social\functions" for Cloud Functions...
+[debug] [2019-09-07T03:59:45.956Z] [runtime-status] Functions runtime initialized. {"cwd":"G:\\react\\social\\functions","node_version":"10.16.2"}
+[debug] [2019-09-07T03:59:45.956Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-07T03:59:45.963Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.5.0","resolution":"G:\\react\\social\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-07T03:59:45.964Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"G:\\react\\social\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-07T03:59:45.965Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"G:\\react\\social\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[helloWorld]: http function initialized (http://localhost:5000/socialape-3baae/us-central1/helloWorld).
+[info] +  functions[getScreams]: http function initialized (http://localhost:5000/socialape-3baae/us-central1/getScreams).
+[info] +  functions[createScream]: http function initialized (http://localhost:5000/socialape-3baae/us-central1/createScream).
+[debug] [2019-09-07T04:00:22.120Z] Accepted request POST /socialape-3baae/us-central1/createScream --> createScream
+[debug] [2019-09-07T04:00:23.110Z] [runtime-status] Functions runtime initialized. {"cwd":"G:\\react\\social\\functions","node_version":"10.16.2"}
+[info] i  functions: Beginning execution of "createScream"
+[debug] [2019-09-07T04:00:23.111Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-07T04:00:23.116Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.5.0","resolution":"G:\\react\\social\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-07T04:00:23.118Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"G:\\react\\social\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-07T04:00:23.119Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"G:\\react\\social\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-07T04:00:23.246Z] [runtime-status] Trigger "createScream" has been found, beginning invocation! {}
+[debug] [2019-09-07T04:00:23.246Z] [runtime-status]  {"httpsTrigger":{},"name":"createScream","entryPoint":"createScream"}
+[debug] [2019-09-07T04:00:23.246Z] [runtime-status] Running createScream in mode HTTPS {}
+[debug] [2019-09-07T04:00:23.262Z] {"socketPath":"\\\\?\\pipe\\G:\\react\\social\\functions\\18020"}
+[debug] [2019-09-07T04:00:23.270Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\G:\\react\\social\\functions\\18020"}
+[debug] [2019-09-07T04:00:23.286Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-07T04:00:23.451Z] [runtime-status] Ephemeral server survived. {}
+[warn] !  functions: Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field body).
+    at Object.validateUserInput (G:\react\social\functions\node_modules\@google-cloud\firestore\build\src\serializer.js:273:15)
+    at Object.validateDocumentData (G:\react\social\functions\node_modules\@google-cloud\firestore\build\src\write-batch.js:611:22)
+    at CollectionReference.add (G:\react\social\functions\node_modules\@google-cloud\firestore\build\src\reference.js:1765:23)
+    at exports.createScream.functions.https.onRequest (G:\react\social\functions\index.js:34:10)
+    at Run (C:\Users\ACER\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:591:20)
+    at C:\Users\ACER\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:565:19
+    at Generator.next (<anonymous>)
+    at C:\Users\ACER\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:7:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\ACER\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:3:12)
+[warn] !  Your function was killed because it raised an unhandled error.
